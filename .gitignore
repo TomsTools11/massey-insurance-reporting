@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Claude Code session memory (not for publication)
+.remember/
+
+# Vercel
+.vercel

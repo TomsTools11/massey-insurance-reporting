@@ -96,21 +96,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
 .adcard{border:1px solid var(--line);border-radius:14px;background:var(--white);overflow:hidden;}
 .adcard .adtag{font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);background:#E6F1FD;padding:8px 22px;border-bottom:1px solid var(--line);}
 .adcard.home .adtag{color:var(--mint-d);background:#D6F7EE;}
-.adbody{display:flex;gap:20px;padding:22px;align-items:flex-start;}
-.adlogo-col{flex-shrink:0;width:104px;display:flex;flex-direction:column;align-items:flex-start;}
-.admark{width:38px;height:38px;border-radius:9px;background:var(--navy);color:#fff;font-weight:900;font-size:18px;display:flex;align-items:center;justify-content:center;margin-bottom:9px;position:relative;}
-.admark:after{content:"";position:absolute;right:-4px;bottom:-4px;width:13px;height:13px;border-radius:50%;background:#D6293E;border:2px solid #fff;}
-.adbrandname{font-size:12.5px;font-weight:900;color:var(--ink);letter-spacing:-.01em;line-height:1.1;}
-.adbrandsub{font-size:8px;font-weight:700;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:3px;}
-.adstars{color:#F0C419;font-size:12px;letter-spacing:1px;margin-top:9px;}
-.adcontent{flex:1;min-width:0;}
-.adhead{font-size:15px;font-weight:800;color:var(--ink);line-height:1.32;letter-spacing:-.01em;margin-bottom:13px;}
-.adlist{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:17px;}
-.adlist li{font-size:12.5px;color:var(--body);line-height:1.42;padding-left:20px;position:relative;}
-.adlist li:before{content:"\2713";position:absolute;left:0;top:0;color:var(--blue);font-weight:800;font-size:12px;}
-.adcard.home .adlist li:before{color:var(--mint-d);}
-.adcta{display:inline-flex;align-items:center;gap:6px;background:var(--blue);color:#fff;font-size:12.5px;font-weight:700;padding:9px 18px;border-radius:8px;}
-.adcard.home .adcta{background:var(--mint-d);}
+.adimg{display:block;width:100%;height:auto;}
 
 /* ---------- plan / roadmap ---------- */
 .plan{border:1px solid var(--line);border-radius:14px;overflow:hidden;}
@@ -141,12 +127,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
   .icards{grid-template-columns:1fr;}
   .adgrid{grid-template-columns:1fr;}
 }
-@media(max-width:560px){
-  .kgrid,.cad{grid-template-columns:1fr;}
-  .adbody{flex-direction:column;}
-  .adlogo-col{flex-direction:row;align-items:center;gap:10px;width:auto;}
-  .adstars{margin-top:0;margin-left:auto;}
-}
+@media(max-width:560px){ .kgrid,.cad{grid-template-columns:1fr;} }
 </style>
 </head>
 <body>
@@ -248,45 +229,11 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
       <div class="adgrid">
         <div class="adcard auto">
           <div class="adtag">PA Auto &middot; V1 — Local &amp; Authentic</div>
-          <div class="adbody">
-            <div class="adlogo-col">
-              <div class="admark">M</div>
-              <div class="adbrandname">MASSEY</div>
-              <div class="adbrandsub">Insurance Agency</div>
-              <div class="adstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            </div>
-            <div class="adcontent">
-              <div class="adhead">Massey Insurance | Talk to Your Local Agent Today</div>
-              <ul class="adlist">
-                <li>Call now for a fast, personalized auto quote for PA drivers</li>
-                <li>You may be overpaying for auto insurance: find out today</li>
-                <li>Discover discounts you may qualify for, like safe-driver &amp; multi-policy</li>
-                <li>Get honest, straightforward answers and a real quote in minutes</li>
-              </ul>
-              <span class="adcta">Get Rate <span>&rarr;</span></span>
-            </div>
-          </div>
+          <img class="adimg" src="../assets/ad-preview-auto.png" alt="PA Auto ad preview: Talk to Your Local Agent Today at Massey Insurance">
         </div>
         <div class="adcard home">
           <div class="adtag">PA Home &middot; V1 — Combination</div>
-          <div class="adbody">
-            <div class="adlogo-col">
-              <div class="admark">M</div>
-              <div class="adbrandname">MASSEY</div>
-              <div class="adbrandsub">Insurance Agency</div>
-              <div class="adstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            </div>
-            <div class="adcontent">
-              <div class="adhead">A Local Agent for Your Home Insurance, Right Here in PA</div>
-              <ul class="adlist">
-                <li>Real coverage advice from a licensed agent, not a call center</li>
-                <li>Auto, home, and bundle options built around your household</li>
-                <li>You may be overpaying for home insurance: find out today</li>
-                <li>Licensed guidance from an expert in your community</li>
-              </ul>
-              <span class="adcta">Get Rate <span>&rarr;</span></span>
-            </div>
-          </div>
+          <img class="adimg" src="../assets/ad-preview-home.png" alt="PA Home ad preview: A Local Agent for Your Home Insurance, Right Here in PA">
         </div>
       </div>
     </section>

@@ -90,6 +90,28 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
 .icard p{font-size:13px;color:var(--body);line-height:1.55;}
 .icard p b{color:var(--ink);font-weight:700;}
 
+/* ---------- ad copy previews ---------- */
+.adnote{font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:20px;max-width:760px;}
+.adgrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.adcard{border:1px solid var(--line);border-radius:14px;background:var(--white);overflow:hidden;}
+.adcard .adtag{font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);background:#E6F1FD;padding:8px 22px;border-bottom:1px solid var(--line);}
+.adcard.home .adtag{color:var(--mint-d);background:#D6F7EE;}
+.adbody{display:flex;gap:20px;padding:22px;align-items:flex-start;}
+.adlogo-col{flex-shrink:0;width:104px;display:flex;flex-direction:column;align-items:flex-start;}
+.admark{width:38px;height:38px;border-radius:9px;background:var(--navy);color:#fff;font-weight:900;font-size:18px;display:flex;align-items:center;justify-content:center;margin-bottom:9px;position:relative;}
+.admark:after{content:"";position:absolute;right:-4px;bottom:-4px;width:13px;height:13px;border-radius:50%;background:#D6293E;border:2px solid #fff;}
+.adbrandname{font-size:12.5px;font-weight:900;color:var(--ink);letter-spacing:-.01em;line-height:1.1;}
+.adbrandsub{font-size:8px;font-weight:700;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:3px;}
+.adstars{color:#F0C419;font-size:12px;letter-spacing:1px;margin-top:9px;}
+.adcontent{flex:1;min-width:0;}
+.adhead{font-size:15px;font-weight:800;color:var(--ink);line-height:1.32;letter-spacing:-.01em;margin-bottom:13px;}
+.adlist{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:17px;}
+.adlist li{font-size:12.5px;color:var(--body);line-height:1.42;padding-left:20px;position:relative;}
+.adlist li:before{content:"\2713";position:absolute;left:0;top:0;color:var(--blue);font-weight:800;font-size:12px;}
+.adcard.home .adlist li:before{color:var(--mint-d);}
+.adcta{display:inline-flex;align-items:center;gap:6px;background:var(--blue);color:#fff;font-size:12.5px;font-weight:700;padding:9px 18px;border-radius:8px;}
+.adcard.home .adcta{background:var(--mint-d);}
+
 /* ---------- plan / roadmap ---------- */
 .plan{border:1px solid var(--line);border-radius:14px;overflow:hidden;}
 .pstep{display:flex;gap:18px;padding:20px 24px;border-top:1px solid var(--divider);background:var(--white);}
@@ -107,7 +129,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
   body{background:#fff;} .shell{display:block;max-width:none;}
   .side{position:static;height:auto;flex-direction:row;align-items:center;justify-content:space-between;padding:20px 30px;}
   .side nav,.side .foot,.side .back{display:none;} .side h1{margin:0;}
-  .kc,.panel,.plan,.icard{break-inside:avoid;}
+  .kc,.panel,.plan,.icard,.adcard{break-inside:avoid;}
 }
 @media(max-width:900px){
   .shell{grid-template-columns:1fr;}
@@ -117,8 +139,14 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
   .kgrid{grid-template-columns:1fr 1fr;}
   .split{grid-template-columns:1fr;}
   .icards{grid-template-columns:1fr;}
+  .adgrid{grid-template-columns:1fr;}
 }
-@media(max-width:560px){ .kgrid,.cad{grid-template-columns:1fr;} }
+@media(max-width:560px){
+  .kgrid,.cad{grid-template-columns:1fr;}
+  .adbody{flex-direction:column;}
+  .adlogo-col{flex-direction:row;align-items:center;gap:10px;width:auto;}
+  .adstars{margin-top:0;margin-left:auto;}
+}
 </style>
 </head>
 <body>
@@ -133,8 +161,9 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
       <a href="#s1"><span class="dot"></span>Program at a glance</a>
       <a href="#s2"><span class="dot"></span>Campaigns &amp; budget</a>
       <a href="#s3"><span class="dot"></span>Targeting &amp; delivery</a>
-      <a href="#s4"><span class="dot"></span>Launch roadmap</a>
-      <a href="#s5"><span class="dot"></span>What we need from you</a>
+      <a href="#s4"><span class="dot"></span>Ad copy previews</a>
+      <a href="#s5"><span class="dot"></span>Launch roadmap</a>
+      <a href="#s6"><span class="dot"></span>What we need from you</a>
     </nav>
     <a class="back" href="../index.html">&larr; Back to account hub</a>
     <div class="foot">GOAL Performance Marketing<br>Massey Insurance &middot; Onboarding 2026</div>
@@ -214,9 +243,58 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
     </section>
 
     <section class="block" id="s4">
-      <div class="bhead"><span class="ix">04</span><div><h2>Launch roadmap</h2><p>From creative to go-live</p></div></div>
+      <div class="bhead"><span class="ix">04</span><div><h2>Ad copy &amp; creative previews</h2><p>Finalized ad copy for PA Auto and PA Home, approved and ready for launch</p></div></div>
+      <p class="adnote">Both ads lead with a local, agent-first message: a real person in the community, not a call center. Auto opens on speed and honesty; Home leans on licensed advice and bundling. Both close on the same "Get Rate" call to action.</p>
+      <div class="adgrid">
+        <div class="adcard auto">
+          <div class="adtag">PA Auto &middot; V1 — Local &amp; Authentic</div>
+          <div class="adbody">
+            <div class="adlogo-col">
+              <div class="admark">M</div>
+              <div class="adbrandname">MASSEY</div>
+              <div class="adbrandsub">Insurance Agency</div>
+              <div class="adstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+            <div class="adcontent">
+              <div class="adhead">Massey Insurance | Talk to Your Local Agent Today</div>
+              <ul class="adlist">
+                <li>Call now for a fast, personalized auto quote for PA drivers</li>
+                <li>You may be overpaying for auto insurance: find out today</li>
+                <li>Discover discounts you may qualify for, like safe-driver &amp; multi-policy</li>
+                <li>Get honest, straightforward answers and a real quote in minutes</li>
+              </ul>
+              <span class="adcta">Get Rate <span>&rarr;</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="adcard home">
+          <div class="adtag">PA Home &middot; V1 — Combination</div>
+          <div class="adbody">
+            <div class="adlogo-col">
+              <div class="admark">M</div>
+              <div class="adbrandname">MASSEY</div>
+              <div class="adbrandsub">Insurance Agency</div>
+              <div class="adstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            </div>
+            <div class="adcontent">
+              <div class="adhead">A Local Agent for Your Home Insurance, Right Here in PA</div>
+              <ul class="adlist">
+                <li>Real coverage advice from a licensed agent, not a call center</li>
+                <li>Auto, home, and bundle options built around your household</li>
+                <li>You may be overpaying for home insurance: find out today</li>
+                <li>Licensed guidance from an expert in your community</li>
+              </ul>
+              <span class="adcta">Get Rate <span>&rarr;</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block" id="s5">
+      <div class="bhead"><span class="ix">05</span><div><h2>Launch roadmap</h2><p>From creative to go-live</p></div></div>
       <div class="plan">
-        <div class="pstep"><div class="num">1</div><div><div class="h">Creative &amp; landing page</div><div class="b">Finalize branded ad creative on your existing branding, animate the logo, and build the branded QuoteFunnel landing pages for Auto and Home with your "About" copy loaded in.</div></div></div>
+        <div class="pstep"><div class="num">1</div><div><div class="h">Creative &amp; landing page</div><div class="b">Ad copy is finalized (see previews above). Build the animated branded creative and the branded QuoteFunnel landing pages for Auto and Home with your "About" copy loaded in.</div></div></div>
         <div class="pstep"><div class="num">2</div><div><div class="h">Campaign build in GOAL</div><div class="b">Create PA Auto and PA Home, set Pennsylvania-statewide geography, apply the record and carrier filters, set the initial ad placement, and curate the strongest lead sources.</div>
           <div class="cad"><div class="c"><div class="w">This week</div><div class="n">Creative + build</div><div class="s">landing pages, campaigns</div></div><div class="c"><div class="w">Next</div><div class="n">Integrations</div><div class="s">Ricochet360 + portal</div></div><div class="c"><div class="w">Then</div><div class="n">Onboarding + go-live</div><div class="s">target before July 4</div></div></div>
         </div></div>
@@ -225,8 +303,8 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
       </div>
     </section>
 
-    <section class="block" id="s5" style="margin-bottom:0;">
-      <div class="bhead"><span class="ix">05</span><div><h2>What we need from you</h2><p>To finish setup and launch on schedule</p></div></div>
+    <section class="block" id="s6" style="margin-bottom:0;">
+      <div class="bhead"><span class="ix">06</span><div><h2>What we need from you</h2><p>To finish setup and launch on schedule</p></div></div>
       <div class="plan">
         <div class="pstep"><div class="num">1</div><div><div class="h">Dedicated lead line</div><div class="b">Your RingCentral link and the dedicated phone number that inbound leads should call.</div></div></div>
         <div class="pstep"><div class="num">2</div><div><div class="h">"About" copy for the landing page</div><div class="b">A short blurb about the agency to feature on your Auto and Home QuoteFunnel pages.</div></div></div>

@@ -22,7 +22,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
 
 /* Sidebar */
 .side{background:var(--navy);color:#cfe0ee;padding:34px 30px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;}
-.side .gw{width:118px;height:auto;display:block;margin-bottom:34px;color:#fff;}
+.side .gw{width:118px;height:auto;aspect-ratio:2509/675;flex-shrink:0;display:block;margin-bottom:34px;color:#fff;}
 .side .eb{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#2D90EE;}
 .side h1{font-size:27px;font-weight:900;color:#fff;line-height:1.08;letter-spacing:-.02em;margin:10px 0 14px;}
 .side .who{font-size:13px;color:#a7c2da;line-height:1.6;}
@@ -33,8 +33,8 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
 .side nav a .dot{width:6px;height:6px;border-radius:50%;background:#3a6386;flex-shrink:0;transition:background .15s;}
 .side nav a:hover .dot{background:var(--mint);}
 .side .foot{margin-top:auto;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);font-size:11px;color:#6f93b3;line-height:1.6;}
-.side .back{font-size:11.5px;color:#7ea9cd;text-decoration:none;display:inline-block;margin-top:14px;}
-.side .back:hover{color:#fff;}
+.side .back{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;font-size:12.5px;font-weight:600;color:#9fbcd6;text-decoration:none;margin-bottom:22px;padding:8px 13px;border:1px solid rgba(255,255,255,.16);border-radius:8px;transition:background .15s,color .15s,border-color .15s;}
+.side .back:hover{background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.3);}
 
 /* Main */
 .main{padding:46px 52px 60px;}
@@ -182,6 +182,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--gray);color:var(-
 <body>
 <div class="shell">
   <aside class="side">
+    <a class="back" href="../index.html">&larr; All Reports</a>
     <svg class="gw" viewBox="0 0 2509 675" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GOAL"><g transform="translate(0.000000,675.000000) scale(0.100000,-0.100000)" fill="currentColor" stroke="none"><path d="M2980 6740 c-1429 -93 -2513 -984 -2855 -2348 -86 -346 -110 -565
 -110 -1032 0 -554 51 -903 191 -1311 455 -1330 1607 -2085 3119 -2046 1204 32
 2116 565 2572 1503 227 467 287 854 281 1794 l-3 455 -1457 3 -1458 2 0 -635
@@ -221,7 +222,7 @@ m1318 -2040 c39 -131 186 -616 325 -1078 l254 -840 -671 -3 c-368 -1 -672 0
       <a href="#s3"><span class="dot"></span>Traffic source performance</a>
       <a href="#s4"><span class="dot"></span>Recommendations</a>
     </nav>
-    <div class="foot">GOAL Performance Marketing<br>All conversion metrics calculated based on Leads, not Clicks.<br><a class="back" href="../index.html">&larr; All reports</a></div>
+    <div class="foot">GOAL Performance Marketing<br>All conversion metrics calculated based on Leads, not Clicks.</div>
   </aside>
   <main class="main">
 

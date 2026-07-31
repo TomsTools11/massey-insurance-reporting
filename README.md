@@ -1,14 +1,17 @@
-# Massey Insurance — Account Hub
+# Massey Insurance — Performance Reports
 
-Static account hub for the Massey Insurance account, plus two onboarding reports.
+Static reporting site for the Massey Insurance account, plus four performance
+reports for the July 8–31, 2026 reporting period.
 Built as plain HTML/CSS (no build step) and deployed on Vercel.
 
 ## Structure
 
 ```
-index.html                                  Account hub (landing page)
-reports/campaign-setup-plan.html            Report 01 — Campaign Setup & Plan
-reports/going-forward-strategy-process.html Report 02 — Going Forward: Strategy & Process
+index.html                                  Report hub (landing page)
+reports/geographic-performance.html         Report 01 — Geographic Performance
+reports/inbound-call-performance.html       Report 02 — Inbound Call Performance
+reports/auto-campaign-performance.html      Report 03 — PA Auto Campaign
+reports/home-campaign-performance.html      Report 04 — PA Home Campaign
 assets/                                      GOAL brand marks (PNG)
 vercel.json                                  Static deployment config
 ```
